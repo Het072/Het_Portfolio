@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -89,47 +90,100 @@
       </section>
       <section id="work" class="reveal">
         <h2>My Work</h2>
-        <div class="work-reels-container">
-          <div class="work-item">
-            <video src="1.mp4" poster="https://via.placeholder.com/270x480.png?text=Loading..." autoplay loop muted playsinline></video>
+        <div class="work-reels-container" id="reelsContainer">
+          <!--
+            Each card only stores its clip in data-video-src.
+            No `src` is set up front, and no autoplay/muted/loop attributes are hard-coded on <video>:
+            everything (loading, playback, muting) is driven by index.tsx so that
+            only the centered card is ever decoding/playing video at a time.
+          -->
+          <div class="work-item" data-video-src="1.mp4">
+            <div class="video-wrapper">
+              <video poster="https://via.placeholder.com/270x480.png?text=Loading..." loop playsinline preload="none"></video>
+              <div class="video-loader"><div class="spinner"></div></div>
+            </div>
+            <button class="mute-toggle" aria-label="Toggle sound"><i class="fas fa-volume-mute"></i></button>
           </div>
-          <div class="work-item">
-             <video src="4.mp4" poster="https://via.placeholder.com/270x480.png?text=Loading..." autoplay loop muted playsinline></video>
+          <div class="work-item" data-video-src="4.mp4">
+            <div class="video-wrapper">
+              <video poster="https://via.placeholder.com/270x480.png?text=Loading..." loop playsinline preload="none"></video>
+              <div class="video-loader"><div class="spinner"></div></div>
+            </div>
+            <button class="mute-toggle" aria-label="Toggle sound"><i class="fas fa-volume-mute"></i></button>
           </div>
-          <div class="work-item">
-             <video src="7.mp4" poster="https://via.placeholder.com/270x480.png?text=Loading..." autoplay loop muted playsinline></video>
+          <div class="work-item" data-video-src="7.mp4">
+            <div class="video-wrapper">
+              <video poster="https://via.placeholder.com/270x480.png?text=Loading..." loop playsinline preload="none"></video>
+              <div class="video-loader"><div class="spinner"></div></div>
+            </div>
+            <button class="mute-toggle" aria-label="Toggle sound"><i class="fas fa-volume-mute"></i></button>
           </div>
-          <div class="work-item">
-            <video src="10.mp4" poster="https://via.placeholder.com/270x480.png?text=Loading..." autoplay loop muted playsinline></video>
+          <div class="work-item" data-video-src="10.mp4">
+            <div class="video-wrapper">
+              <video poster="https://via.placeholder.com/270x480.png?text=Loading..." loop playsinline preload="none"></video>
+              <div class="video-loader"><div class="spinner"></div></div>
+            </div>
+            <button class="mute-toggle" aria-label="Toggle sound"><i class="fas fa-volume-mute"></i></button>
           </div>
-          <div class="work-item">
-            <video src="2.mp4" poster="https://via.placeholder.com/270x480.png?text=Loading..." autoplay loop muted playsinline></video>
+          <div class="work-item" data-video-src="2.mp4">
+            <div class="video-wrapper">
+              <video poster="https://via.placeholder.com/270x480.png?text=Loading..." loop playsinline preload="none"></video>
+              <div class="video-loader"><div class="spinner"></div></div>
+            </div>
+            <button class="mute-toggle" aria-label="Toggle sound"><i class="fas fa-volume-mute"></i></button>
           </div>
-          <div class="work-item">
-            <video src="5.mp4" poster="https://via.placeholder.com/270x480.png?text=Loading..." autoplay loop muted playsinline></video>
+          <div class="work-item" data-video-src="5.mp4">
+            <div class="video-wrapper">
+              <video poster="https://via.placeholder.com/270x480.png?text=Loading..." loop playsinline preload="none"></video>
+              <div class="video-loader"><div class="spinner"></div></div>
+            </div>
+            <button class="mute-toggle" aria-label="Toggle sound"><i class="fas fa-volume-mute"></i></button>
           </div>
-          <div class="work-item">
-            <video src="8.mp4" poster="https://via.placeholder.com/270x480.png?text=Loading..." autoplay loop muted playsinline></video>
+          <div class="work-item" data-video-src="8.mp4">
+            <div class="video-wrapper">
+              <video poster="https://via.placeholder.com/270x480.png?text=Loading..." loop playsinline preload="none"></video>
+              <div class="video-loader"><div class="spinner"></div></div>
+            </div>
+            <button class="mute-toggle" aria-label="Toggle sound"><i class="fas fa-volume-mute"></i></button>
           </div>
-          <div class="work-item">
-            <video src="11.mp4" poster="https://via.placeholder.com/270x480.png?text=Loading..." autoplay loop muted playsinline></video>
+          <div class="work-item" data-video-src="11.mp4">
+            <div class="video-wrapper">
+              <video poster="https://via.placeholder.com/270x480.png?text=Loading..." loop playsinline preload="none"></video>
+              <div class="video-loader"><div class="spinner"></div></div>
+            </div>
+            <button class="mute-toggle" aria-label="Toggle sound"><i class="fas fa-volume-mute"></i></button>
           </div>
-          <div class="work-item">
-            <video src="3.mp4" poster="https://via.placeholder.com/270x480.png?text=Loading..." autoplay loop muted playsinline></video>
+          <div class="work-item" data-video-src="3.mp4">
+            <div class="video-wrapper">
+              <video poster="https://via.placeholder.com/270x480.png?text=Loading..." loop playsinline preload="none"></video>
+              <div class="video-loader"><div class="spinner"></div></div>
+            </div>
+            <button class="mute-toggle" aria-label="Toggle sound"><i class="fas fa-volume-mute"></i></button>
           </div>
-          <div class="work-item">
-            <video src="6.mp4" poster="https://via.placeholder.com/270x480.png?text=Loading..." autoplay loop muted playsinline></video>
+          <div class="work-item" data-video-src="6.mp4">
+            <div class="video-wrapper">
+              <video poster="https://via.placeholder.com/270x480.png?text=Loading..." loop playsinline preload="none"></video>
+              <div class="video-loader"><div class="spinner"></div></div>
+            </div>
+            <button class="mute-toggle" aria-label="Toggle sound"><i class="fas fa-volume-mute"></i></button>
           </div>
-          <div class="work-item">
-            <video src="9.mp4" poster="https://via.placeholder.com/270x480.png?text=Loading..." autoplay loop muted playsinline></video>
+          <div class="work-item" data-video-src="9.mp4">
+            <div class="video-wrapper">
+              <video poster="https://via.placeholder.com/270x480.png?text=Loading..." loop playsinline preload="none"></video>
+              <div class="video-loader"><div class="spinner"></div></div>
+            </div>
+            <button class="mute-toggle" aria-label="Toggle sound"><i class="fas fa-volume-mute"></i></button>
           </div>
-          <div class="work-item">
-            <video src="12.mp4" poster="https://via.placeholder.com/270x480.png?text=Loading..." autoplay loop muted playsinline></video>
+          <div class="work-item" data-video-src="12.mp4">
+            <div class="video-wrapper">
+              <video poster="https://via.placeholder.com/270x480.png?text=Loading..." loop playsinline preload="none"></video>
+              <div class="video-loader"><div class="spinner"></div></div>
+            </div>
+            <button class="mute-toggle" aria-label="Toggle sound"><i class="fas fa-volume-mute"></i></button>
           </div>
         </div>
         <div class="view-more-container">
             <a href="https://www.instagram.com/reverse._ae/" target="_blank" rel="noopener noreferrer" class="cta-button view-more-btn"><i class="fab fa-instagram"></i> View on Instagram</a>
-            <!-- Please replace '#' with your actual Google Drive portfolio link -->
             <a href="https://drive.google.com/drive/folders/1N5lRamwJJXHAv_ah7OA6306ifGylo_UV" target="_blank" rel="noopener noreferrer" class="cta-button view-more-btn"><i class="fab fa-google-drive"></i> View on Drive</a>
         </div>
       </section>
@@ -145,7 +199,7 @@
           <i class="fas fa-magic"></i>
         </div>
         <h2>Pricing</h2>
-        
+
         <h3 style="font-size: 2.2rem; color: var(--secondary-color); margin-bottom: 3rem; font-family: var(--heading-font); font-weight: 500;">Graphics Design Packages</h3>
         <div class="pricing-grid">
           <div class="pricing-card">
@@ -179,7 +233,7 @@
             <a href="https://wa.me/919909798764?text=I'm%20interested%20in%20the%20Graphics%20Premium%20Package" target="_blank" rel="noopener noreferrer" class="cta-button">Choose Plan</a>
           </div>
         </div>
-        
+
         <h3 style="font-size: 2.2rem; color: var(--secondary-color); margin-top: 6rem; margin-bottom: 3rem; font-family: var(--heading-font); font-weight: 500;">Video Editing Packages</h3>
         <div class="pricing-grid">
           <div class="pricing-card">
